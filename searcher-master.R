@@ -12,7 +12,7 @@ library("DT")
 ui <- dashboardPage(
   
   # Dashboard Header
-  dashboardHeader(title = "hids database browser"),
+  dashboardHeader(title = "SQL database browser"),
   
   # Dashboard Sidebar 
   dashboardSidebar(disable = TRUE),
@@ -26,41 +26,41 @@ ui <- dashboardPage(
       # Side Panel Main Page Layout Tab
       sidebarPanel(
         
-        # Show this panel only if dataset is cve_main
-        conditionalPanel('input.dataset === "cve_main"', helpText("cve_main"),
+        # Show this panel only if dataset is Table1
+        conditionalPanel('input.dataset === "Table1"', helpText("Table1"),
                          checkboxGroupInput(
                            'show_vars1', 
-                           'Columns in cve_main to show:', 
-                           names(cve.main.dt), 
-                           selected = names(cve.main.dt)
+                           'Columns in Table1 to show:', 
+                           names(Table1.dt), 
+                           selected = names(Table1.dt)
                          )
         ),
         
-        # Show this panel only if dataset is cve_main_servers
-        conditionalPanel('input.dataset === "cve_main_servers"', helpText("cve_main_servers"),
+        # Show this panel only if dataset is Table2
+        conditionalPanel('input.dataset === "Table2"', helpText("Table2"),
                          checkboxGroupInput(
                            'show_vars2', 
-                           'Columns in cve_main_servers to show:', 
-                           names(cve.main.servers.dt), 
-                           selected = names(cve.main.servers.dt))
+                           'Columns in Table2 to show:', 
+                           names(Table2.dt), 
+                           selected = names(Table2.dt))
         ),
         
-        # Show this panel only if dataset is mir_main
-        conditionalPanel('input.dataset === "mir_main"', helpText('mir_main'),
+        # Show this panel only if dataset is Table3
+        conditionalPanel('input.dataset === "Table3"', helpText('Table3'),
                          checkboxGroupInput(
                            'show_vars3', 
                            'Columns in mir_main to show:', 
-                           names(mir.main.dt), 
-                           selected = names(mir.main.dt))
+                           names(Table3.dt), 
+                           selected = names(Table3.dt))
         ),
         
-        # Show this panel only if the dataset is mir_mbmrlogs
-        conditionalPanel('input.dataset === "mir_mbmrlogs"', helpText('mir_mbmrlogs'),
+        # Show this panel only if the dataset is Table4
+        conditionalPanel('input.dataset === "Table4"', helpText('Table4'),
                          checkboxGroupInput(
                            'show_vars4', 
-                           'Columns in mir_mbmrlogs to show:', 
-                           names(mir.mbmrlogs.dt), 
-                           selected = names(mir.mbmrlogs.dt)
+                           'Columns in Table4 to show:', 
+                           names(Table4.dt), 
+                           selected = names(Table4.dt)
                          )
         ),
         
