@@ -4,8 +4,4 @@ It was developed with sensitive HIPAA data so having to rewrite the application 
 
 Project requires four data files loaded into memory, I'm working on building fake databases to simulate data, good for testing. 
 
-Working on a function(s) to generate fake data in SQL databases.  
-
-License MIT. 
-
-Written by John Ryan zelling. Contributors welcome. 
+Working on a function(s) to generate fake data in SQL databases. 
